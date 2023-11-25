@@ -1,0 +1,58 @@
+[
+  {
+    "objectID": "tarea.html",
+    "href": "tarea.html",
+    "title": "Tarea",
+    "section": "",
+    "text": "source\n\nTarea\n\n Tarea (titulo:str, fecha_entrega:str, descripcion:str='')\n\nCrea una tarea con un título, una descripción, un estado (completado o no completado) y una fecha de entrega\n\n\n\n\n\n\n\n\n\n\nType\nDefault\nDetails\n\n\n\n\ntitulo\nstr\n\nTítulo de la tarea\n\n\nfecha_entrega\nstr\n\nFecha de entrega en formato dd/mm/aaaa. De no estar escrito así, marcará error\n\n\ndescripcion\nstr\n\nInformación adicional sobre la tarea\n\n\nReturns\nNone\n\n\n\n\n\n\n\nComparaciones\n\nsource\n\nTarea.__lt__\n\n Tarea.__lt__ (other:__main__.Tarea)\n\nDefine la lógica de comparación basada en la fecha de entrega"
+  },
+  {
+    "objectID": "articulo.html",
+    "href": "articulo.html",
+    "title": "Artículo",
+    "section": "",
+    "text": "source\n\nArticulo\n\n Articulo (nombre:str)\n\nCrea un artículo de supermercado con un nombre. Inicializa el ‘estado’ en False, para saber que no ha sido adquirido\n\n\n\n\nType\nDetails\n\n\n\n\nnombre\nstr\nTítulo del artículo\n\n\nReturns\nNone\n\n\n\n\n\nsource\n\n\nArticulo.__str__\n\n Articulo.__str__ ()\n\nRegresa la informacion completa sobre el artículo"
+  },
+  {
+    "objectID": "lista_supermercado.html",
+    "href": "lista_supermercado.html",
+    "title": "Lista del supermercado",
+    "section": "",
+    "text": "source\n\nListaSupermercado\n\n ListaSupermercado ()\n\nCrea una lista de artículos de supermercado\n\nsource\n\n\nListaSupermercado.agrega_articulo\n\n ListaSupermercado.agrega_articulo (nombre:str)\n\nCrea un articulo de supermercado y lo agrega a la lista del supermercado\n\n\n\n\nType\nDetails\n\n\n\n\nnombre\nstr\nNombre con el que se creará el artículo\n\n\n\n\nsource\n\n\nListaSupermercado.marcar_agregado\n\n ListaSupermercado.marcar_agregado (nombre:str)\n\nBusa un articulo por su nombre y lo marca como agregado\n\n\n\n\n\n\n\n\n\nType\nDetails\n\n\n\n\nnombre\nstr\nNombre del articulo que va a buscar\n\n\nReturns\nbool\nRegresa True si el elemento estaba en la lista y fue marcado como completado\n\n\n\n\nsource\n\n\nListaSupermercado.lista_completa\n\n ListaSupermercado.lista_completa ()\n\nImprime la lista de supermercado completa, incluyendo los elementos marcados como ya agregados"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "nbdev_ejemplo",
+    "section": "",
+    "text": "El proposito de esta libreria es ejemplificar el workflow de trabajo en nbdev. Para ello, crearemos en total 4 notebooks, dos que haremos durante la clase y dos que se dejarán de tarea."
+  },
+  {
+    "objectID": "index.html#instalación",
+    "href": "index.html#instalación",
+    "title": "nbdev_ejemplo",
+    "section": "Instalación",
+    "text": "Instalación\npip install nbdev_ejemplo"
+  },
+  {
+    "objectID": "index.html#notebooks-creados",
+    "href": "index.html#notebooks-creados",
+    "title": "nbdev_ejemplo",
+    "section": "Notebooks creados",
+    "text": "Notebooks creados\nLa idea de este paquete es crear tanto un administrador de tareas como una lista de supermercado, a los cuales puedas agregar elementos e imprimir sus contenidos.\nCreemos que es un ejemplo ilustrativo de cómo utilizar varios notebooks al crear un paquete."
+  },
+  {
+    "objectID": "administrador.html",
+    "href": "administrador.html",
+    "title": "Administrador",
+    "section": "",
+    "text": "source"
+  },
+  {
+    "objectID": "administrador.html#pruebas-de-la-clase",
+    "href": "administrador.html#pruebas-de-la-clase",
+    "title": "Administrador",
+    "section": "Pruebas de la clase",
+    "text": "Pruebas de la clase\nCreamos un administrador\n\nadministrador = Administrador()\n\n\nadministrador.agrega_tarea(titulo=\"Proyecto FDD\", fecha_entrega=\"25/11/2023\", descripcion=\"Código, GitHub y presentación\")\n\n\nadministrador.agrega_tarea(titulo=\"Tarea FDD\", fecha_entrega=\"20/11/2023\", descripcion=\"Tarea limpieza de datos\")\n\nImprimamos la lista completa\n\nadministrador.imprime_completo()\n\nTarea: Tarea FDD. \nDescripción: Tarea limpieza de datos. \nFecha de entrega: 20/11/2023. \nCompletado: False\nTarea: Proyecto FDD. \nDescripción: Código, GitHub y presentación. \nFecha de entrega: 25/11/2023. \nCompletado: False\n\n\nAhora marquemos una tarea como completada e imprimamos las no completadas\n\nassert administrador.tarea_completada(\"Tarea FDD\")\n\n\nadministrador.imprime_faltantes()\n\nTarea: Proyecto FDD. \nDescripción: Código, GitHub y presentación. \nFecha de entrega: 25/11/2023. \nCompletado: False"
+  }
+]
